@@ -1,0 +1,770 @@
+/* PizzaBox.css */
+
+/* Variables de colores */
+:root {
+  --orange-50: #fff7ed;
+  --orange-100: #ffedd5;
+  --orange-400: #fb923c;
+  --orange-600: #ea580c;
+  --orange-700: #c2410c;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-900: #111827;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.pizza-box-landing {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--orange-50), white);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar-scrolled {
+  background: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-image {
+  height: 3.5rem;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logo-image {
+    height: 2.5rem;
+  }
+}
+
+.logo-icon {
+  height: 2rem;
+  width: 2rem;
+  color: white;
+}
+
+.logo-icon-scrolled {
+  color: var(--orange-600);
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo-text-scrolled {
+  color: var(--gray-900);
+}
+
+.navbar-links {
+  display: none;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+  }
+}
+
+.nav-link {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #fed7aa;
+}
+
+.nav-link-scrolled {
+  color: var(--gray-700);
+}
+
+.nav-link-scrolled:hover {
+  color: var(--orange-600);
+}
+
+.mobile-menu-btn {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.menu-icon-light {
+  color: white;
+}
+
+.menu-icon-dark {
+  color: var(--gray-900);
+}
+
+.mobile-menu {
+  background: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
+.mobile-menu-content {
+  padding: 0.5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-menu-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  color: var(--gray-700);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.mobile-menu-link:hover {
+  background: var(--orange-50);
+  color: var(--orange-600);
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--orange-600), var(--red-600), var(--orange-700));
+  opacity: 0.9;
+}
+
+.hero-overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: black;
+  opacity: 0.2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+.hero-title {
+  font-size: 3.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-in;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 6rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .hero-buttons {
+    flex-direction: row;
+  }
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background: white;
+  color: var(--orange-600);
+}
+
+.btn-primary:hover {
+  background: var(--orange-50);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: var(--orange-600);
+}
+
+.pizza-decoration {
+  position: absolute;
+  opacity: 0.2;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.pizza-left {
+  bottom: 2.5rem;
+  left: 2.5rem;
+}
+
+.pizza-right {
+  top: 5rem;
+  right: 2.5rem;
+  animation-delay: 1s;
+}
+
+.pizza-icon {
+  height: 4rem;
+  width: 4rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .pizza-icon {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+/* Features Section */
+.features-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.features-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-wrapper {
+  background: var(--orange-100);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.feature-icon {
+  height: 2rem;
+  width: 2rem;
+  color: var(--orange-600);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.feature-text {
+  color: var(--gray-600);
+}
+
+/* Menu Section */
+.menu-section {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, var(--orange-50), white);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--gray-900);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--gray-600);
+}
+
+.menu-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.menu-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.menu-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-0.5rem);
+}
+
+.menu-card-image {
+  height: 12rem;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(to bottom right, var(--orange-400), var(--red-500));
+}
+
+.menu-pizza-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-pizza-img {
+  transform: scale(1.1);
+}
+
+.menu-pizza-icon {
+  height: 6rem;
+  width: 6rem;
+  color: white;
+  opacity: 0.8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-card-content {
+  padding: 1.5rem;
+}
+
+.menu-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.menu-card-desc {
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.menu-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-card-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--orange-600);
+}
+
+.menu-card-btn {
+  background: var(--orange-600);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.menu-card-btn:hover {
+  background: var(--orange-700);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);
+}
+
+.menu-card-btn:active {
+  transform: scale(0.98);
+}
+
+/* About Section */
+.about-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--gray-900);
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  font-size: 1.125rem;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.about-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--orange-100);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  margin-top: 1rem;
+}
+
+.about-badge-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  color: var(--orange-600);
+}
+
+.about-badge-text {
+  font-weight: bold;
+  color: var(--orange-600);
+}
+
+.about-image {
+  position: relative;
+  border-radius: 1.5rem;
+  height: 24rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.about-pizza-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover .about-pizza-img {
+  transform: scale(1.1);
+}
+
+.about-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover .about-overlay {
+  transform: translateY(0);
+}
+
+.about-overlay-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.about-overlay-text {
+  font-size: 1rem;
+}
+
+.about-pizza-icon {
+  height: 12rem;
+  width: 12rem;
+  color: white;
+  opacity: 0.8;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 5rem 0;
+  background: linear-gradient(to bottom, var(--orange-50), #fed7aa);
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.contact-card-clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-card-clickable:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px -15px rgba(234, 88, 12, 0.3);
+  border: 2px solid var(--orange-600);
+}
+
+.contact-card-clickable:active {
+  transform: translateY(-4px);
+}
+
+.contact-icon-wrapper {
+  background: var(--orange-100);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.contact-icon {
+  height: 2rem;
+  width: 2rem;
+  color: var(--orange-600);
+}
+
+.contact-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.contact-text {
+  color: var(--gray-600);
+}
+
+.contact-text-small {
+  color: var(--orange-600);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background: var(--gray-900);
+  color: white;
+  padding: 3rem 0;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-image {
+  height: 4rem;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-image {
+    height: 3rem;
+  }
+}
+
+.footer-icon {
+  height: 2rem;
+  width: 2rem;
+  color: var(--orange-600);
+}
+
+.footer-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.footer-subtitle {
+  color: var(--gray-400);
+  margin-bottom: 1rem;
+}
+
+.footer-copyright {
+  color: var(--gray-500);
+  font-size: 0.875rem;
+}
