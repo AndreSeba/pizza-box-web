@@ -28,49 +28,49 @@ export default function PizzaBoxLanding() {
     { 
       name: "Calabrísima", 
       desc: "Pizza especial con calabresa y especias", 
-      price: "Bs 55",
+      price: "Bs 35",
       image: CALABRISIMA
     },
     { 
       name: "Champiñeta", 
       desc: "Deliciosa pizza con champiñones frescos", 
-      price: "Bs 50",
+      price: "Bs 35",
       image: CHAMPINETA
     },
     { 
       name: "Choclolover", 
       desc: "Pizza dulce con chocolate", 
-      price: "Bs 48",
+      price: "Bs 35",
       image: CHOCLOLOVER
     },
     { 
       name: "Hawaianita", 
       desc: "Jamón, piña y queso mozzarella", 
-      price: "Bs 52",
+      price: "Bs 35",
       image: HAWAIANITA
     },
     { 
       name: "Misteriosa", 
       desc: "Combinación secreta de ingredientes", 
-      price: "Bs 58",
+      price: "Bs 35",
       image: MISTERIOSA
     },
     { 
       name: "Pepapower", 
       desc: "Pepperoni extra con doble queso", 
-      price: "Bs 55",
+      price: "Bs 35",
       image: PEPAPOWER
     },
     { 
       name: "Quesudita", 
       desc: "Cuatro quesos premium", 
-      price: "Bs 60",
+      price: "Bs 35",
       image: QUESUDITA
     },
     { 
       name: "Roja Sabrosa", 
       desc: "Salsa especial con ingredientes selectos", 
-      price: "Bs 54",
+      price: "Bs 35",
       image: ROJA_SABROSA
     },
   ];
@@ -329,7 +329,7 @@ export default function PizzaBoxLanding() {
               </div>
               <h3 className="contact-title">Horario</h3>
               <p className="contact-text">Lun - Dom</p>
-              <p className="contact-text">18:00 PM - 12:00 AM</p>
+              <p className="contact-text">17:30 PM - 1:00 AM</p>
             </div>
           </div>
         </div>
