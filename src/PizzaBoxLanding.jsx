@@ -33,13 +33,13 @@ export default function PizzaBoxLanding() {
     },
     { 
       name: "Champiñeta", 
-      desc: "Deliciosa pizza con champiñones frescos", 
+      desc: "Jamón, Champiñones frescos y salteados con la receta especial", 
       price: "Bs 35",
       image: CHAMPINETA
     },
     { 
       name: "Choclolover", 
-      desc: "Pizza dulce con chocolate", 
+      desc: "Pizza con jamón, choclo y salsa especial", 
       price: "Bs 35",
       image: CHOCLOLOVER
     },
@@ -69,7 +69,7 @@ export default function PizzaBoxLanding() {
     },
     { 
       name: "Roja Sabrosa", 
-      desc: "Salsa especial con ingredientes selectos", 
+      desc: "Jamón, Pimentones preparados y condimentados con trozos de aceituna", 
       price: "Bs 35",
       image: ROJA_SABROSA
     },
