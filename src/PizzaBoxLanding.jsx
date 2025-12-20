@@ -329,7 +329,7 @@ export default function PizzaBoxLanding() {
               </div>
               <h3 className="contact-title">Horario</h3>
               <p className="contact-text">Lun - Dom</p>
-              <p className="contact-text">17:30 PM - 1:00 AM</p>
+              <p className="contact-text">10:00 AM - 3:00 AM</p>
             </div>
           </div>
         </div>
